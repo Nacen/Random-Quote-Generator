@@ -22,10 +22,12 @@ class Quote extends Component {
   fetchQuoteAndColor = () => {
     let newColor = Colors[Math.floor(Math.random() * Colors.length)];
     let newQuote = { ...Quotes[Math.floor(Math.random() * Quotes.length)] };
-    while (this.state.text === newQuote.text && this.state.color === newColor) {
+    while (this.state.text === newQuote.text)
       newQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
+
+    while (this.state.color === newColor)
       newColor = Colors[Math.floor(Math.random() * Colors.length)];
-    }
+
     this.setState({
       text: newQuote.text,
       author: newQuote.author,
