@@ -22,8 +22,9 @@ class Quote extends Component {
   fetchQuoteAndColor = () => {
     let newColor = Colors[Math.floor(Math.random() * Colors.length)];
     let newQuote = { ...Quotes[Math.floor(Math.random() * Quotes.length)] };
-    while (this.state.text === newQuote.text) {
+    while (this.state.text === newQuote.text && this.state.color === newColor) {
       newQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
+      newColor = Colors[Math.floor(Math.random() * Colors.length)];
     }
     this.setState({
       text: newQuote.text,
@@ -35,13 +36,10 @@ class Quote extends Component {
   render() {
     return (
       <div id="quote-box">
-        <p style={{ color: this.state.color}} id="text">
+        <p style={{ color: this.state.color }} id="text">
           {this.state.text}
         </p>
-        <p
-          id="author"
-          style={{ color: this.state.color}}
-        >
+        <p id="author" style={{ color: this.state.color }}>
           - {this.state.author}
         </p>
         <div className="buttons">
