@@ -8,3 +8,9 @@
     font-size: 1.6rem;
     color: #dddddd;
 }
+
+@media only screen and (max-width: 600px) {
+    .creator {
+        top: 85%;
+    }
+}
