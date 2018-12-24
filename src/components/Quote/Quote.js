@@ -22,7 +22,7 @@ class Quote extends Component {
   fetchQuoteAndColor = () => {
     let newColor = Colors[Math.floor(Math.random() * Colors.length)];
     let newQuote = { ...Quotes[Math.floor(Math.random() * Quotes.length)] };
-    while (this.state.text === newQuote.text)
+    while (this.state.text === newQuote.text && this.state.author === newQuote.author)
       newQuote = Quotes[Math.floor(Math.random() * Quotes.length)];
 
     while (this.state.color === newColor)
@@ -57,6 +57,19 @@ class Quote extends Component {
               className="buttons__social"
             >
               <FontAwesomeIcon icon={["fab", "twitter"]} />
+            </button>
+          </a>
+          <a
+            id="facebook-quote"
+            href="https://www.facebook.com/sharer/sharer.php?u=https://nacen.github.io/Random-Quote-Machine"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <button
+              style={{ backgroundColor: this.state.color }}
+              className="buttons__social"
+            >
+              <FontAwesomeIcon icon={["fab", "facebook"]} />
             </button>
           </a>
           <button
