@@ -55,7 +55,8 @@ const quotes = [
     author: "John Lennon"
   },
   {
-    text: "Believe that life is worth living and your belief will help create the fact.",
+    text:
+      "Believe that life is worth living and your belief will help create the fact.",
     author: "William James"
   },
   {
@@ -67,15 +68,18 @@ const quotes = [
     author: "Stephen King"
   },
   {
-    text: "Don’t gain the world and lose your soul, wisdom is better than silver or gold.",
+    text:
+      "Don’t gain the world and lose your soul, wisdom is better than silver or gold.",
     author: "Bob Marley"
   },
   {
-    text: "To live is the rarest thing in the world. Most people exist, that is all. ",
+    text:
+      "To live is the rarest thing in the world. Most people exist, that is all. ",
     author: "Oscar Wilde"
   },
   {
-    text: "Life can only be understood backwards; but it must be lived forwards. ",
+    text:
+      "Life can only be understood backwards; but it must be lived forwards. ",
     author: "Soren Kierkegaard"
   },
   {
@@ -99,8 +103,9 @@ const quotes = [
     author: "Henry Ford"
   },
   {
-    text: "In three words I can sum up everything I've learned about life: it goes on.",
+    text:
+      "In three words I can sum up everything I've learned about life: it goes on.",
     author: "Robert Frost"
-  },
+  }
 ];
 export default quotes;
